@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 8</title>
+</head>
+<body>
+   <p>this is first paragraph</p>
+     <p id="second" hidden>this is second paragraph</p>
+     <button onclick="display()">Click to show second one</button> 
+</body>
+<script>function display()
+ {
+    let p_tag=document.getElementsByTagName("p");
+    console.log(p_tag);
+    p_tag[1].hidden=false;
+    p_tag[0].hidden=true;
+}</script>
+</html>
