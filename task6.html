@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 5</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="focus"
+      onfocus="changeText3()"
+      onblur="chngeback()"
+      value="this is first text"
+    />
+  </body>
+  <script>
+    let Input = document.getElementById("focus");
+    function changeText3() {
+      Input.value = "this is after change";
+    }
+    function changeback() {
+      Input.value = "this is after blur";
+    }
+  </script>
+</html>
