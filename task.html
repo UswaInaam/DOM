@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css</title>
+  </head>
+  <body>
+    <!-- task1 -->
+    <p id="para" onclick="changeText()">original paragraph</p>
+    <!-- task2 -->
+    <p id="para1" onmouseenter="enter()" onmouseleave="leave()">
+      im Uswa Inaam
+    </p>
+    <!-- task3 -->
+    <p id="number">0</p>
+    <button id="clickme" onclick="increase()">click me</button>
+    <!-- task4 -->
+    <p id="number1">0</p>
+    <button id="clickme" onclick="dncrease()">click me</button>
+    <!-- task5 -->
+    <p id="para2">Hello! how are you</p>
+    <button id="btn" ondblclick="doubleClick()">Double Click me</button>
+    <!-- task6 -->
+    <input type="text" name="input" id="input"/>
+    <button onclick="btn1()">Clear</button>
     <!-- oninput event -->
-    <div id="sample"></div>
+    <!-- <div id="sample"></div>
 <style>
     #sample{
         height: 100px;
         width: 100px;
         border: 1px solid blue;
     }
-</style>
-
-</body>
-<script>
-    $("document").ready{
-{
-    alert("j query is ready")
-}
+</style> -->
+  </body>
+  <script>
+    function changeText() {
+      let paragraph = document.getElementById("para");
+      paragraph.innerText = "this is second paragraph";
     }
-    let sample =document.getElementById("sample")
-   let sample =$("sample")
-    sample.style.height="100px";
-    sample.style.width="100px";
-    sample.style.border="1px solid black";
-
-</script>
+    function enter() {
+      let paragraph = document.getElementById("para1");
+      paragraph.innerText = "im from pakistan";
+    }
+    function leave() {
+      let paragraph = document.getElementById("para1");
+      paragraph.innerText = "im uswa inaam";
+    }
+    function doubleClick() {
+      let paragraph = document.getElementById("para2");
+      paragraph.innerText = "Double Clicked";
+    }
+    // let output=0;
+    function increase() {
+      let paragraph = document.getElementById("number");
+      let value = parseInt(paragraph.innerText);
+      paragraph.innerText = value+1;
+    }
+    function dncrease() {
+      let paragraph = document.getElementById("number1");
+      let value = parseInt(paragraph.innerText);
+      paragraph.innerText = value-1;
+    }
+    function btn1() {
+      let paragraph = document.getElementById("input");
+      paragraph.value = " ";
+    }
+    //     $("document").ready{
+    // {
+    //     alert("j query is ready")
+    // }
+    //     }
+    //     let sample =document.getElementById("sample")
+    //    let sample =$("sample")
+    //     sample.style.height="100px";
+    //     sample.style.width="100px";
+    //     sample.style.border="1px solid black";
+  </script>
 </html>
