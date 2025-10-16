@@ -13,6 +13,9 @@
       onblur="chngeback()"
       value="this is first text"
     />
+    <!-- task3 -->
+    <p id="number">0</p>
+    <button id="clickme" onclick="increase()">click me</button>
   </body>
   <script>
     let Input = document.getElementById("focus");
@@ -21,6 +24,12 @@
     }
     function changeback() {
       Input.value = "this is after blur";
+    }
+    // let output=0;
+    function increase() {
+      let paragraph4 = document.getElementById("number");
+      let value = parseInt(paragraph4.innerText);
+      paragraph4.innerText = value-1;
     }
   </script>
 </html>
